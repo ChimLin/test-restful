@@ -1,3 +1,3 @@
-ALTER TABLE user ADD date_birth VARCHAR(255);
+ALTER TABLE user ADD date_birth date;
 
 UPDATE user set description="soME VALUE!!!!";

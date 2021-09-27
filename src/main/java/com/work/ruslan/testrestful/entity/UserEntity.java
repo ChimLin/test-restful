@@ -1,6 +1,9 @@
 package com.work.ruslan.testrestful.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 //@Table(name = "userEntity")
@@ -13,10 +16,10 @@ public class UserEntity {
     private String userSurname;
     private String userThirdName;
     private String email;
+    @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING)
+    private String  dateBirth;
 
-    public UserEntity(){
-
-    }
+    public UserEntity(){}
 
     public Long getId() {
         return id;

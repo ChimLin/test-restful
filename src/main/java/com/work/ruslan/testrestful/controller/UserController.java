@@ -21,7 +21,7 @@ public class UserController {
             userService.registration(user);
             return ResponseEntity.ok("user was added");
         }catch (Exception e) {
-            return ResponseEntity.badRequest().body("Error");
+            return ResponseEntity.badRequest().body("Error! Email is invalid");
         }
     }
 
