@@ -1,6 +1,8 @@
 package com.work.ruslan.testrestful.controller;
 
 import com.work.ruslan.testrestful.entity.UserEntity;
+import com.work.ruslan.testrestful.repository.UserRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,9 +10,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/user")
 public class UserController {
 
+    @Autowired
+    private UserRepo userRepo;
+
     @PostMapping
     public ResponseEntity registration(@RequestBody UserEntity user){
         try {
+            userRepo.save(user);
             return ResponseEntity.ok("working");
         }catch (Exception e) {
             return ResponseEntity.badRequest().body("Error");
