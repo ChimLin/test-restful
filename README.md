@@ -3,4 +3,14 @@ Testing work
 
 # Swagger
 
-http://localhost:8080/swagger-ui.html
+http://localhost:8080/swagger-ui.html<br /> 
+
+# Post
+
+{<br /> 
+    "userName": " name",<br /> 
+    "userSurname": "surname",<br /> 
+    "userThirdName": " Migustu",<br /> 
+    "email": "ru@mail.ru",<br /> 
+    "dateBirth" : "1001-20-11"<br /> 
+}<br /> 
