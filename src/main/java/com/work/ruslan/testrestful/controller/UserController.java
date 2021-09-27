@@ -17,10 +17,18 @@ public class UserController {
     public ResponseEntity registration(@RequestBody UserEntity user){
         try {
             userRepo.save(user);
-            return ResponseEntity.ok("working");
+            return ResponseEntity.ok("user was added");
         }catch (Exception e) {
             return ResponseEntity.badRequest().body("Error");
         }
+    }
+
+    @GetMapping
+    public ResponseEntity getOneUser(@RequestBody Long id){
+        if(userRepo.findById(id).get() == null){
+
+        }
+        return ResponseEntity.badRequest().body("Error");
     }
 
     @GetMapping("/")
@@ -31,4 +39,6 @@ public class UserController {
             return ResponseEntity.badRequest().body("Error");
         }
     }
+
+
 }
