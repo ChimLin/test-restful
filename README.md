@@ -6,7 +6,9 @@ Testing work
 http://localhost:8080/swagger-ui.html<br /> 
 
 # Post
-Example for sending data by using POSt
+Use https://www.postman.com/ to get or post data
+
+Example for sending data by using POST
 
 {<br /> 
     "userName": " name",<br /> 
